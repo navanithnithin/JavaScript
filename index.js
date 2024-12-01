@@ -178,7 +178,7 @@ const obj1 = {
   gender: "Rahul",
   myfun: function () {
     console.log(this); //block scope
-  },
+  }, 
 };
 
 const obj2 = {
@@ -298,13 +298,45 @@ console.log(obj5);
 console.log(obj4);
 idselect.classList.remove("brd");
 console.log();
-idselecter.style.background = "green"; // addind inline style using javascript
+idselecter.style.background = "green"; // adding inline style using javascript
 // idselecter.setAttribute("area","734") //setting attribute to given tag
 // idselect.remove()  //used to remove elements
 
 const newvar = document.getElementsByClassName("block");
 console.log(newvar);
 for (let i = 0; i < newvar.length; i++) {
-  console.log(newvar.item(i).style.background="blue");
+  console.log((newvar.item(i).style.background = "blue"));
 }
 
+//eventliestners
+
+function handleButtonClick() {
+  console.log("button is Clicked");
+  // alert("button Clicked")
+}
+let buttonVar = document.getElementById("clickButton");
+buttonVar.onclick = handleButtonClick();
+
+buttonVar.addEventListener("click", handleButtonClick);
+
+buttonVar.addEventListener("click", () => {
+  console.log("This is Hacked");
+});
+
+function handleMouseOver() {
+  console.log("mouseOver");
+}
+
+//dynamin programing
+
+let buttonTag = document.getElementById("newButton");
+
+let  container= document.getElementById("container");
+console.log(container);
+
+
+buttonTag.addEventListener("click", () => {
+  const element1 = document.createElement("h1");
+  element1.innerText = "Nithin s";
+  container.appendChild(element1)
+});
