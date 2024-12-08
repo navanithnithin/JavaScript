@@ -1,0 +1,12 @@
+.col{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    font-size: 160px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+}
